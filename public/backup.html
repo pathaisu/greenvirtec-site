@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กรีนเวอร์เทค - Leading IoT Innovations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        /* Color Scheme and Typography */
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #34D399 30%, #059669 100%);
+        }
+        .bg-dark {
+            background-color: #1a202c;
+            color: #fff;
+        }
+        .text-green {
+            color: #059669;
+        }
+        .text-gray-dark {
+            color: #4a5568;
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .subtitle {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+        .description {
+            font-size: 1.125rem;
+            margin-bottom: 1.25rem;
+            color: #4a5568;
+        }
+        .contact-us {
+            max-width: 400px;
+        }
+        /* Button Styles */
+        .btn-primary {
+            background-color: #059669;
+            padding: 12px 24px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #047857;
+            transform: translateY(-2px);
+        }
+        /* Interactive Elements */
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        /* Slider Styles */
+        .slider {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .slick-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .slick-prev, .slick-next {
+            color: #059669;
+            z-index: 1;
+        }
+        .slick-dots li button:before {
+            color: #059669;
+        }
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        /* Responsive Menu */
+        .menu-btn {
+            display: none;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: inline-block;
+            }
+            .menu-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                background-color: white;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+            .menu-links.active {
+                display: flex;
+            }
+            .menu a {
+                padding: 1rem 0;
+                width: 100%;
+                text-align: center;
+            }
+            .container {
+                padding: 0 1rem;
+            }
+            .slider {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow fixed top-0 left-0 w-full z-10">
+        <div class="container mx-auto p-4 flex justify-between items-center fade-in">
+            <img src="assets/logo.png" alt="กรีนเวอร์เทค Logo" class="h-12 m-2">
+            <div class="menu">
+                <button class="menu-btn text-gray-800 text-xl">&#9776;</button>
+                <nav class="menu-links">
+                    <a href="#home" class="text-gray-800 hover:text-green-500 mx-4">Home</a>
+                    <a href="#projects" class="text-gray-800 hover:text-green-500 mx-4">Projects</a>
+                    <a href="#features" class="text-gray-800 hover:text-green-500 mx-4">Key Features</a>
+                    <a href="#contact" class="text-gray-800 hover:text-green-500 mx-4">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="relative bg-gradient-primary h-screen flex items-center justify-center">
+        <div class="absolute inset-0">
+            <img src="assets/first_project/atv_control_3.jpg" alt="Background Image" class="w-full h-full object-cover opacity-30">
+        </div>
+        <div class="relative text-center text-white px-6 md:px-12 fade-in">
+            <h1 class="title leading-tight animate-pulse">Driving Network-Connected IoT Innovations</h1>
+            <p class="subtitle text-gray-100">Empowering industries with advanced IoT solutions for seamless connectivity and enhanced operational efficiency.</p>
+            <br/>
+            <div>
+                <a href="#projects" class="btn-primary mt-12 hover-scale">Explore Our Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto fade-in">
+            <h2 class="title text-center text-gray-800 mb-12">Our Projects</h2>
+            
+            <!-- Project 1 -->
+            <div class="flex flex-col md:flex-row mb-16 items-center slide-in-left">
+                <!-- Images and video on the left -->
+                <div class="md:w-1/2 m-4">
+                    <!-- <div class="slider mb-6">
+                        <div><img src="assets/first_project/atv_control_1.jpg" alt="ATV Control System 1" class="w-full object-cover"></div>
+                        <div><img src="assets/first_project/atv_control_2.jpg" alt="ATV Control System 2" class="w-full object-cover"></div>
+                        <div><img src="assets/first_project/atv_control_3.jpg" alt="ATV Control System 3" class="w-full object-cover"></div>
+                        <div><img src="assets/first_project/atv_control_4.jpg" alt="ATV Control System 4" class="w-full object-cover"></div>
+                        <div><img src="assets/first_project/atv_control_5.jpg" alt="ATV Control System 5" class="w-full object-cover"></div>
+                    </div> -->
+                    <!-- MP4 video -->
+                    <video class="w-full h-48 md:h-64 rounded-lg" controls>
+                        <source src="assets/first_project/atv_vdo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Description on the right -->
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="subtitle text-green">ATV Control System</h3>
+                    <p class="description">Revolutionizing agricultural tasks with a rugged, remote-controlled ATV designed for harsh terrains and heavy loads. Enhance efficiency and safety in farming operations with our state-of-the-art control system.</p>
+                    <p class="client-info"><strong>Clients:</strong> Agricultural companies, large farms, and organizations involved in rural development and mechanized farming.</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="flex flex-col md:flex-row mb-16 items-center slide-in-right">
+                <!-- Images and video on the left -->
+                <div class="md:w-1/2 m-4">
+                    <img src="assets/second_project/bems_1.png" alt="Building Energy Management System" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <!-- Description on the right -->
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="subtitle text-green">Building Energy Management System (BEMS)</h3>
+                    <p class="description">Optimize energy usage in buildings with our advanced BEMS. Monitor, control, and reduce energy consumption efficiently, lowering costs while enhancing sustainability.</p>
+                    <p class="client-info"><strong>Clients:</strong> Commercial real estate developers, property management companies, and facility managers in large corporations.</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="flex flex-col md:flex-row mb-16 items-center slide-in-left">
+                <!-- Images and video on the left -->
+                <div class="md:w-1/2 m-4">
+                    <img src="assets/third_project/bms_1.png" alt="Battery Management System" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <!-- Description on the right -->
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="subtitle text-green">Battery Management System (BMS)</h3>
+                    <p class="description">Ensure the safety and longevity of Electric Tuk Tuk batteries with our intelligent BMS. Featuring real-time monitoring and advanced protection features, our BMS is key to efficient electric vehicle operation.</p>
+                    <p class="client-info"><strong>Clients:</strong> Electric vehicle manufacturers, especially those focusing on urban mobility solutions like electric Tuk Tuks, and companies involved in battery technology research.</p>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="flex flex-col md:flex-row items-center slide-in-right">
+                <!-- Images and video on the left -->
+                <div class="md:w-1/2 m-4">
+                    <img src="assets/fourth_project/stcb_1.jpg" alt="Smart Temperature Controlled Box" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <!-- Description on the right -->
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="subtitle text-green">Smart Temperature Controlled Box (STCB)</h3>
+                    <p class="description">Transport sensitive materials with confidence using our STCB. Designed with precise temperature control and real-time monitoring, it ensures the safe delivery of critical goods.</p>
+                    <p class="client-info"><strong>Clients:</strong> Healthcare providers, pharmaceutical companies, and logistics companies specializing in the transport of perishable goods and sensitive medical supplies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="features" class="py-20 bg-dark">
+        <div class="container mx-auto fade-in">
+            <h2 class="title text-center mb-12">Key Features</h2>
+            <p class="text-center description">Explore the cutting-edge features that make our projects stand out. From real-time monitoring to energy efficiency, our solutions are designed to meet the highest standards of performance and reliability.</p>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <footer id="contact" class="py-16 bg-gradient-primary text-white">
+        <div class="container mx-auto text-center fade-in contact-us">
+            <h2 class="title mb-4">Contact Us</h2>
+            <p class="description">For more information about our projects, please reach out to us at:</p>
+            <!-- <p class="description">Email: pathaisu@gmail.com</p> -->
+            <p class="description">
+                <b>The Sirindhorn International Thai-German Graduate School of Engineering (TGGS)</b><br/>
+                King Mongkut's University of Technology North Bangkok (KMUTNB, 1518 Pracharat 1 Road, Wongsawang, Bang Sue, Bangkok 10800)
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        // Initialize Slick Slider
+        // $(document).ready(function(){
+        //     $('.slider').slick({
+        //         dots: true,
+        //         infinite: true,
+        //         speed: 500,
+        //         slidesToShow: 1,
+        //         slidesToScroll: 1,
+        //         arrows: true,
+        //         autoplay: false, // Disable autoplay to prevent infinite scroll issues
+        //         adaptiveHeight: true,
+        //         responsive: [
+        //             {
+        //                 breakpoint: 768,
+        //                 settings: {
+        //                     arrows: false,
+        //                     dots: true
+        //                 }
+        //             },
+        //             {
+        //                 breakpoint: 500,
+        //                 settings: {
+        //                     arrows: false,
+        //                     dots: true,
+        //                     slidesToShow: 1,
+        //                     slidesToScroll: 1,
+        //                     infinite: false // Prevent infinite loop on small screens
+        //                 }
+        //             }
+        //         ]
+        //     });
+        // });
+
+        // Responsive Menu Toggle
+        const menuBtn = document.querySelector('.menu-btn');
+        const menuLinks = document.querySelector('.menu-links');
+        menuBtn.addEventListener('click', () => {
+            menuLinks.classList.toggle('active');
+        });
+
+        // JavaScript to handle scroll-triggered animations
+        const scrollElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add('visible');
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        });
+
+        // Initial run to catch elements already in view
+        handleScrollAnimation();
+    </script>
+</body>
+</html>
